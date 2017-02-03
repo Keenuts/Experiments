@@ -1,0 +1,28 @@
+This repo store several little experiments.
+
+MyMiniMips
+  This one is a simple MIPS emulator. Basics instructions are implemented, and
+basic programs such as fibo can be run using a simple binary file.
+
+42sh-a-custom-bash: (Not allowed to publish this.)
+   This was a 3 weeks project we had to make in team (3). Wa had to implement 'bash --posix'.
+   This version feature :
+   	- Some bash options
+	- Prompt (PS1 & PS2 using variable substitution)
+	- Shell parser
+	- AST printer
+	- Operators (Logical & Maths)
+	- Pipes & redirections (Basics)
+	- Simple commands
+	- Conditionnals (If X; Then ...)
+	- While & For loops
+	- Functions
+	- History, Tilde expansion
+	- Buit-in : exit, cd, shopt, export, alias, unalias, echo, source
+	- Variables
+	- Quoting
+	- Path Expansion
+	- Arithmetic expansion
+	- Aliases
+	- Completion (readline)
+	- Command substitution (Subshells)

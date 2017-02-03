@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DE6F1AB-CCAF-4E82-B277-177FAB2D30ED}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyMiniMips</RootNamespace>
+    <AssemblyName>MyMiniMips</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CPU.cs" />
+    <Compile Include="Instruction.cs" />
+    <Compile Include="Instructions\Inst_add.cs" />
+    <Compile Include="Instructions\Inst_addi.cs" />
+    <Compile Include="Instructions\Inst_addiu.cs" />
+    <Compile Include="Instructions\Inst_addu.cs" />
+    <Compile Include="Instructions\Inst_and.cs" />
+    <Compile Include="Instructions\Inst_andi.cs" />
+    <Compile Include="Instructions\Inst_beq.cs" />
+    <Compile Include="Instructions\Inst_bgtz.cs" />
+    <Compile Include="Instructions\Inst_blez.cs" />
+    <Compile Include="Instructions\Inst_bne.cs" />
+    <Compile Include="Instructions\Inst_div.cs" />
+    <Compile Include="Instructions\Inst_divu.cs" />
+    <Compile Include="Instructions\Inst_j.cs" />
+    <Compile Include="Instructions\Inst_jal.cs" />
+    <Compile Include="Instructions\Inst_jalr.cs" />
+    <Compile Include="Instructions\Inst_jr.cs" />
+    <Compile Include="Instructions\Inst_lb.cs" />
+    <Compile Include="Instructions\Inst_lbu.cs" />
+    <Compile Include="Instructions\Inst_lh.cs" />
+    <Compile Include="Instructions\Inst_lhi.cs" />
+    <Compile Include="Instructions\Inst_lhu.cs" />
+    <Compile Include="Instructions\Inst_llo.cs" />
+    <Compile Include="Instructions\Inst_lw.cs" />
+    <Compile Include="Instructions\Inst_mfhi.cs" />
+    <Compile Include="Instructions\Inst_mflo.cs" />
+    <Compile Include="Instructions\Inst_mthi.cs" />
+    <Compile Include="Instructions\Inst_mtlo.cs" />
+    <Compile Include="Instructions\Inst_mult.cs" />
+    <Compile Include="Instructions\Inst_multu.cs" />
+    <Compile Include="Instructions\Inst_nor.cs" />
+    <Compile Include="Instructions\Inst_or.cs" />
+    <Compile Include="Instructions\Inst_ori.cs" />
+    <Compile Include="Instructions\Inst_sb.cs" />
+    <Compile Include="Instructions\Inst_sh.cs" />
+    <Compile Include="Instructions\Inst_sll.cs" />
+    <Compile Include="Instructions\Inst_sllv.cs" />
+    <Compile Include="Instructions\Inst_slt.cs" />
+    <Compile Include="Instructions\Inst_slti.cs" />
+    <Compile Include="Instructions\Inst_sltu.cs" />
+    <Compile Include="Instructions\Inst_sra.cs" />
+    <Compile Include="Instructions\Inst_srav.cs" />
+    <Compile Include="Instructions\Inst_srl.cs" />
+    <Compile Include="Instructions\Inst_srlv.cs" />
+    <Compile Include="Instructions\Inst_sub.cs" />
+    <Compile Include="Instructions\Inst_subu.cs" />
+    <Compile Include="Instructions\Inst_sw.cs" />
+    <Compile Include="Instructions\Inst_syscall.cs" />
+    <Compile Include="Instructions\Inst_trap.cs" />
+    <Compile Include="Instructions\Inst_xor.cs" />
+    <Compile Include="Instructions\Inst_xori.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ram.cs" />
+    <Compile Include="Tools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
