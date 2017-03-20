@@ -1,7 +1,7 @@
 This repo store several little experiments.
 
 MyMiniMips
-  This one is a simple MIPS emulator. Basics instructions are implemented, and
+  This one is a simple MIPS emulator made in first year. Basics instructions are implemented, and
 basic programs such as fibo can be run using a simple binary file.
 
 42sh-a-custom-bash: (Not allowed to publish this.)
